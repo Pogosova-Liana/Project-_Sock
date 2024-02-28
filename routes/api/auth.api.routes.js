@@ -18,7 +18,7 @@ router.post('/registration', async (req, res) => {
 
     const hpassword = await bcrypt.hash(password, 10);
 
-    const userInDb = await User.create({ name, email, password: hpassword });
+    const userInDb = await User.create({ name, email, password: hpassword,role:'user' });
 
     user = await User.findOne({
       where: { id: userInDb.id },
