@@ -16,7 +16,6 @@ if (regForm) {
         name: name.value,
         email: email.value,
         password: password.value,
-        role: 'user'
          };
 
       // отправили информацию с userom на сервер
