@@ -6,6 +6,7 @@ function Layout({ title, children, user }) {
       <html lang="ru">
         <head>
           <title>{title}</title> 
+          <script defer src='/scripts/auth.js' />
           <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         </head>
         <body>
