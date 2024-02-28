@@ -2,7 +2,7 @@ const React = require("react");
 
 function FormSock() {
   return (
-    <form className="form-choose-sock">
+    <form action="/sock-generator/select">
       <select name="color">
         <option value="1">Красный</option>
         <option value="2">Синий</option>
