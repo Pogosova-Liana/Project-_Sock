@@ -1,6 +1,7 @@
 const btnStart = document.querySelector('.btn_start');
 const sockSelect = document.querySelector('.sock-select');
 const container = document.querySelector('.sock-container');
+const favoriteList=document.querySelector('.favoriteList')
 
 if (btnStart) {
   btnStart.addEventListener('click', () => {
@@ -51,3 +52,20 @@ if (container) {
     }
   });
 }
+if(favoriteList){
+  console.log(favoriteList);
+  favoriteList.addEventListener('click',async(e)=>{
+    if(e.target.classList.contains('btn-delete')){
+      const card = e.target.closest('.favoriteSockItem')
+      const{id}=card.dataset
+      const res = await fetch(`/api/favorites/${id}`,{
+      method:'DELETE',
+    })
+    
+    const data=await res.json()
+    if(data.message==='success')
+card.remove()
+    }
+  })
+}
+
