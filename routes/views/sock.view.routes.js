@@ -13,18 +13,18 @@ router.get("/", (req, res) => {
   );
 });
 
-router.get("/select", async (req, res) => {
-  try {
-    const { color, design, photo } = req.query;
-    const sock = await Sock.findOne({ where: { color, design, photo } });
-    const document = res.renderComponent(SockGenPage, {
-      title: "Создать носок",
-      sock,
-    });
-    res.send(document);
-  } catch ({ message }) {
-    res.status(500).send({ error: message });
-  }
-});
+//router.get("/select", async (req, res) => {
+//  try {
+//    const { color, design, photo } = req.query;
+//    const sock = await Sock.findOne({ where: { color, design, photo } });
+//    const document = res.renderComponent(SockGenPage, {
+//      title: "Создать носок",
+//      sock,
+//    });
+//    res.send(document);
+//  } catch ({ message }) {
+//    res.status(500).send({ error: message });
+//  }
+//});
 
 module.exports = router;
