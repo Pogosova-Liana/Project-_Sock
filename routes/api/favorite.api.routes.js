@@ -1,7 +1,22 @@
 const router = require('express').Router();
 const { Favorite } = require('../../db/models'); // чтобы обратится к базе не забываем подключить модель нужную
-const ProductItem = require('../../components/ProductItem');  // в роутеры подтягиваем компоненты с кем работаем
+  // в роутеры подтягиваем компоненты с кем работаем
 
+
+
+router.delete('/:id',async(req,res)=>{
+    try{
+
+        const{id}=req.params
+        const result=await Favorite.destroy({where:{id}})
+        if(result){
+            res.json({message:'success'})
+        }
+    }
+    catch ({ message }) {
+        res.status(500).json({ error: message });
+      }
+})
 // router.post('/', async (req, res) => {
 //   try { 
 //     const {
@@ -24,3 +39,4 @@ const ProductItem = require('../../components/ProductItem');  // в роутер
 //     res.status(500).json({ error: message });
 //   }
 // });
+module.exports=router
