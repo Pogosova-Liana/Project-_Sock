@@ -1,11 +1,19 @@
-const router = require('express').Router();
+const router = require("express").Router();
 
-const authViewRouter = require('./views/auth.view.routes');
-const authApiRouter = require('./api/auth.api.routes')
+//view
+const sockViewRouter = require("./views/sock.view.routes");
+const authViewRouter = require("./views/auth.view.routes");
 const MainPage = require("./views/mainPage.views.routes");
 
-router.use('/auth', authViewRouter);
+//api
+const authApiRouter = require("./api/auth.api.routes");
+
+//view routes
+router.use("/sock-generator", sockViewRouter);
+router.use("/auth", authViewRouter);
 router.use("/", MainPage);
-router.use('/api/auth', authApiRouter);
+
+//api routes
+router.use("/api/auth", authApiRouter);
 
 module.exports = router;

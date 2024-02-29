@@ -16,7 +16,7 @@ function Navbar({user}) {
         <a href="/favorites" className="navbar">Favorites</a>
         </li>
         <li>
-        <a href="/fart" className="navbar">Cart</a>
+        <a href="/cart" className="navbar">Cart</a>
         </li>
           {user ? (
             <>
