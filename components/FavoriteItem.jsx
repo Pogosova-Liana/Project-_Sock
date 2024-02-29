@@ -2,8 +2,8 @@ const React = require('react');
 
 function FavoriteItem({ sock }) {
   return (
-    <div className="favoriteSockItem" data-id={id}>
-      <img src="#">{sock.imgSock}</img>
+    <div className="favoriteSockItem">
+      <img src={sock.imgSock} />
       <div className="card-action">
         <button className="btn-cart">
           <a href="#">Добавить в корзину</a>
