@@ -4,6 +4,7 @@ const router = require("express").Router();
 const sockViewRouter = require("./views/sock.view.routes");
 const authViewRouter = require("./views/auth.view.routes");
 const MainPage = require("./views/mainPage.views.routes");
+const FavoritePage = require("./views/favorite.view.routes")
 
 //api
 const authApiRouter = require("./api/auth.api.routes");
@@ -12,6 +13,7 @@ const authApiRouter = require("./api/auth.api.routes");
 router.use("/sock-generator", sockViewRouter);
 router.use("/auth", authViewRouter);
 router.use("/", MainPage);
+router.use('/favorites', FavoritePage)
 
 //api routes
 router.use("/api/auth", authApiRouter);
