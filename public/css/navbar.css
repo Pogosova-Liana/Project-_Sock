@@ -1,0 +1,49 @@
+nav {
+   background: linear-gradient(-45deg, #23d5ab, rgb(255, 230, 0), #ee7752);
+   background-size: 400% 400%;
+   animation: gradient 8s infinite; 
+   padding: 10px; 
+   height: 40px;
+   border-radius: 20px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+ }
+
+ .footer{
+   background: linear-gradient(-45deg, #23d5ab, rgb(255, 230, 0), #ee7752);
+   background-size: 400% 400%;
+   animation: gradient 8s infinite; 
+   padding: 10px; 
+   height: 40px;
+   border-radius: 20px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+ }
+
+ ul {
+   list-style-type: none; 
+   margin: 0;
+   padding: 0;
+ }
+ 
+ li {
+   display: inline; 
+   margin-right: 20px; /
+ }
+
+ .logo{
+ justify-self: left;
+ }
+
+ a.navbar{
+   text-decoration: none; 
+   color: rgb(11, 11, 136); 
+   font-weight: bold; 
+   font-size: 24px; 
+ }
+
+ a.navbar:hover{
+   color: white;
+ }

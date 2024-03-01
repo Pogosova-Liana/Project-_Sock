@@ -5,7 +5,7 @@ function SockImgItem({ sock }) {
     <div className="sock-card" data-id={sock.id}>
       <img src={sock.imgSock} alt="img" className="sock-img" />
       <h3>{sock.price}</h3>
-      <button className="to-favorite">В Избранное</button>
+      <button className="to-favorite btn">В Избранное</button>
       <a href="/">В Корзину</a>
     </div>
   );

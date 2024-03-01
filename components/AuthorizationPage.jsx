@@ -1,15 +1,17 @@
-const React = require('react');
-const Layout = require('./Layout');
+const React = require("react");
+const Layout = require("./Layout");
 
-function AuthorizationPage({ title,user }) {
+function AuthorizationPage({ title, user }) {
   return (
     <Layout title={title} user={user}>
-      <h3>Welcome back!</h3>
-      <form className='sign-in'>
-        <input type='email' name='email' placeholder='email' />
-        <input type='password' name='password' placeholder='password' />
-        <button>Submit</button>
-      </form>
+      <div className="MainPageContainer">
+        <h1>Welcome back!</h1>
+        <form className="sign-in">
+          <input type="email" name="email" placeholder="email" />
+          <input type="password" name="password" placeholder="password" />
+          <button className="btn">Submit</button>
+        </form>
+      </div>
     </Layout>
   );
 }

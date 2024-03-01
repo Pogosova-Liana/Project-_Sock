@@ -5,11 +5,11 @@ function FavoriteItem({ sock }) {
     <div className="favoriteSockItem" data-id={sock.id}>
       <img src={sock.imgSock} />
       <div className="card-action">
-        <button className="btn-cart">
+        <button className="btn-cart btn">
           <a href="#">Добавить в корзину</a>
         </button>
-        <button className="btn-delete">Удалить</button>
-        <button className="btn-share">Поделиться</button>
+        <button className="btn-delete btn">Удалить</button>
+        <button className="btn-share btn">Поделиться</button>
       </div>
     </div>
   );

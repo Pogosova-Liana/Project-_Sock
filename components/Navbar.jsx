@@ -5,9 +5,7 @@ function Navbar({user}) {
     <nav>
       <ul>
         <li>
-            <div>
-                Logo
-            </div>
+            <img src="https://cdn-icons-png.flaticon.com/512/6779/6779375.png" className="logo" height={30}/>
         </li>
         <li>
           <a href="/" className="navbar">Main</a>
@@ -21,19 +19,19 @@ function Navbar({user}) {
           {user ? (
             <>
               <li>
-                <a>{user.name}</a>
+                <a className="navbar">{user.name}</a>
               </li>
               <li>
-                <a href='/api/auth/logout'>logout</a>
+                <a href='/api/auth/logout' className="navbar">logout</a>
               </li>
             </>
           ) : (
             <>
               <li>
-                <a href='/auth/registration'>sign-up</a>
+                <a href='/auth/registration' className="navbar">sign-up</a>
               </li>
               <li>
-                <a href='/auth/authorization'>sign-in</a>
+                <a href='/auth/authorization' className="navbar">sign-in</a>
               </li>
             </>
           )}
