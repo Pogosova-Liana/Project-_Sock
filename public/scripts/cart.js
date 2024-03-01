@@ -1,12 +1,12 @@
 const cartContainer = document.querySelector('.cartItem');
-const doneOrder = document.querySelector('.done-order')
+const doneOrder = document.querySelector('.done-order');
 
 if (cartContainer) {
   cartContainer.addEventListener('click', async (e) => {
     if (e.target.classList.contains('show-order')) {
       const card = e.target.closest('.cartItem');
       const { id } = card.dataset;
-      console.log(id);
+      // console.log(id);
       const res = await fetch(`/api/cart/orders/${id}`, {
         method: 'POST',
         headers: { 'Content-type': 'application/json' },
@@ -14,7 +14,7 @@ if (cartContainer) {
       });
 
       const data = await res.json();
-      console.log(data);
+      // console.log(data);
       if (data.message === 'success') {
         document
           .querySelector('.cartItem')
@@ -23,9 +23,8 @@ if (cartContainer) {
     }
   });
 }
-if(doneOrder)
-{
-   doneOrder.addEventListener('click', async (e)=>{
-      alert('Ваш заказ принят. Скоро с вами свяжется менеджер')
-   })
+if (doneOrder) {
+  doneOrder.addEventListener('click', async (e) => {
+    alert('Ваш заказ принят. Скоро с вами свяжется менеджер');
+  });
 }

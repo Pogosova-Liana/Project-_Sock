@@ -44,14 +44,14 @@ router.post('/:id', async (req, res) => {
 router.post('/orders/:id', async (req, res) => {
   try {
     const { id } = req.params;
-    console.log(id, 666666);
+    // console.log(id, 666666);
     const orders = await Order_line.findAll({
       where: { cart_id: id },
       include: Sock,
     });
-    console.log(orders, 5555);
+    // console.log(orders, 5555);
     const html = res.renderComponent(OrderCard, { orders }, { doctype: false });
-    console.log(html, 999999);
+    // console.log(html, 999999);
     if (html) {
       res.status(200).json({ message: 'success', html });
     }
