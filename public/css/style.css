@@ -1,0 +1,95 @@
+* {
+  font-family: "Kode Mono", monospace;
+}
+
+body {
+  text-decoration: none;
+  color: black;
+  text-shadow: white 2px 2px 10px;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a5d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 8s infinite;
+  height: 100vh;
+}
+
+input {
+  background: linear-gradient(-45deg, #23d5ab, rgb(255, 230, 0), #ee7752);
+  background-size: 400% 400%;
+  animation: gradient 8s infinite;
+  padding: 10px;
+  height: 10px;
+  border-radius: 20px;
+}
+
+:-ms-input-placeholder {
+  color: rgb(11, 11, 136);
+  font-size: 18px;
+}
+
+::-webkit-input-placeholder {
+  color: rgb(11, 11, 136);
+  font-size: 18px;
+}
+.sock-img, .favImg, .orderImg{
+   height: 200px;
+}
+
+
+.MainPageContainer {
+  height: 75vh;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(https://cdn-icons-png.flaticon.com/512/6779/6779375.png);
+  background-repeat: repeat-x;
+  background-position: center;
+}
+
+.sock-page-container {
+  flex-direction: column;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 75vh;
+  width: 100%;
+}
+.FavContainer{
+   height: max-content;
+   flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sock-main-container {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.error-page{
+   color: white;
+   flex-direction: column;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 75vh;
+  width: 100%;
+  background-image: url(https://cdn4.iconfinder.com/data/icons/zwo-data-internet-vol-1/25/page_error_404_not_found-512.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
