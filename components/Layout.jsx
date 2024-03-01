@@ -1,9 +1,9 @@
-const React = require("react");
-const Navbar = require("./Navbar");
-const Footer = require("./Footer");
+const React = require('react');
+const Navbar = require('./Navbar');
+const Footer = require('./Footer');
 function Layout({ title, children, user }) {
   return (
-    <html lang="ru">
+    <html lang='ru'>
       <head>
         <title>{title}</title>
         <link rel="preconnect" href="https://fonts.googleapis.com" />

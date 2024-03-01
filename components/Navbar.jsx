@@ -1,6 +1,6 @@
-const React = require("react");
+const React = require('react');
 
-function Navbar({user}) {
+function Navbar({ user }) {
   return (
     <nav>
       <ul>
@@ -11,10 +11,10 @@ function Navbar({user}) {
           <a href="/" className="navbar">Main</a>
         </li>
         <li>
-        <a href="/favorites" className="navbar">Favorites</a>
+          <a href="/favorites" className="navbar">Favorites</a>
         </li>
         <li>
-        <a href="/cart" className="navbar">Cart</a>
+          <a href="/cart" className="navbar">Cart</a>
         </li>
           {user ? (
             <>

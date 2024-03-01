@@ -50,6 +50,20 @@ if (container) {
         alert('Успешно добавили в избранное');
       }
     }
+    if (e.target.classList.contains('to-basket')) {
+      const card = e.target.closest('.sock-card');
+      const { id } = card.dataset;
+      const res = await fetch(`/api/cart/${id}`, {
+        method: 'POST',
+        headers: { 'Content-type': 'application/json' },
+        body: JSON.stringify({ id }),
+      });
+
+      const data = await res.json();
+      if (data.message === 'success') {
+        alert('Успешно добавили в корзину');
+      }
+    }
   });
 }
 if(favoriteList){

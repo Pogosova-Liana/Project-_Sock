@@ -18,6 +18,13 @@ module.exports = (sequelize, DataTypes) => {
         },
         onDelete: 'CASCADE',
       },
+      status: {
+        allowNull: false,
+        type: DataTypes.TEXT,
+      },
+      totalPrice: {
+        type: DataTypes.TEXT,
+      },
     },
     {
       sequelize,
