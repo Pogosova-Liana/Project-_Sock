@@ -6,7 +6,7 @@ function SockImgItem({ sock }) {
       <img src={sock.imgSock} alt="img" className="sock-img" />
       <h3>{sock.price}</h3>
       <button className="to-favorite">В Избранное</button>
-      <a href="/">В Корзину</a>
+      <button className='to-basket'>В корзину</button>
     </div>
   );
 }
