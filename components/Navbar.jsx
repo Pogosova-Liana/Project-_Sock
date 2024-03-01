@@ -10,14 +10,14 @@ function Navbar({ user }) {
         <li>
           <a href="/" className="navbar">Main</a>
         </li>
-        <li>
+        
+          {user ? (
+            <><li>
           <a href="/favorites" className="navbar">Favorites</a>
         </li>
         <li>
           <a href="/cart" className="navbar">Cart</a>
         </li>
-          {user ? (
-            <>
               <li>
                 <a className="navbar">{user.name}</a>
               </li>
