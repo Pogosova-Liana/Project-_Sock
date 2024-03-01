@@ -6,11 +6,13 @@ const SockImgItem = require("./SockImgItem");
 function SockGenPage({ title, user, sock }) {
   return (
     <Layout title={title} user={user}>
-      <div className="sock-main-container">
+      <div className="sock-page-container">
         <h1>SockGenPage</h1>
-        <FormSock />
-        <div className="sock-container">
-          <SockImgItem sock={sock} />
+        <div className="sock-main-container">
+          <FormSock />
+          <div className="sock-container">
+            <SockImgItem sock={sock} />
+          </div>
         </div>
       </div>
     </Layout>

@@ -27,7 +27,7 @@ function FormSock() {
       <input type="radio" name="photo" value="3" />
       Photo_3
       <hr />
-      <button>Выбрать</button>
+      <button className="btn">Выбрать</button>
     </form>
   );
 }
