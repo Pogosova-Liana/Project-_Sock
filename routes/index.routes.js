@@ -5,7 +5,7 @@ const sockViewRouter = require("./views/sock.view.routes");
 const authViewRouter = require("./views/auth.view.routes");
 const MainPage = require("./views/mainPage.views.routes");
 const FavoritePage = require("./views/favorite.view.routes");
-const errorViewRouter = require("./views/404.view.routes.js");
+//const errorViewRouter = require("./views/404.view.routes.js");
 const CartPage = require('./views/cart.view.routes');
 
 //api
@@ -19,7 +19,7 @@ router.use("/sock-generator", sockViewRouter);
 router.use("/auth", authViewRouter);
 router.use("/", MainPage);
 router.use("/favorites", FavoritePage);
-router.use("/*", errorViewRouter);
+//router.use("/*", errorViewRouter);
 router.use('/cart', CartPage);
 
 //api routes

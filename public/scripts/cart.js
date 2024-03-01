@@ -1,4 +1,5 @@
 const cartContainer = document.querySelector('.cartItem');
+const doneOrder = document.querySelector('.done-order')
 
 if (cartContainer) {
   cartContainer.addEventListener('click', async (e) => {
@@ -21,4 +22,10 @@ if (cartContainer) {
       }
     }
   });
+}
+if(doneOrder)
+{
+   doneOrder.addEventListener('click', async (e)=>{
+      alert('Ваш заказ принят. Скоро с вами свяжется менеджер')
+   })
 }

@@ -5,7 +5,8 @@ function CartItem({ cart }) {
   return (
     <div className='cartItem' data-id={cart.id}>
       <h2>{cart.status}</h2>
-      <button className='show-order'>Показать заказы</button>
+      <button className='show-order btn'>Показать заказы</button>
+      <button className='done-order btn'>Оформить заказ</button>
     </div>
   );
 }

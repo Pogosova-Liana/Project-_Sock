@@ -5,11 +5,11 @@ const FavoriteItem = require("./FavoriteItem");
 function FavoritePage({ title, socks, user }) {
   return (
     <Layout title={title} user={user}>
-      <div className="MainPageContainer">
+      <div className="FavContainer">
         <h2>Избранное:</h2>
         <div className="favoriteList">
           {socks.map((sock) => (
-            <FavoriteItem sock={sock} />
+            <FavoriteItem fav={sock} />
           ))}
         </div>
       </div>
