@@ -13,26 +13,5 @@ router.delete("/:id", async (req, res) => {
     res.status(500).json({ error: message });
   }
 });
-// router.post('/', async (req, res) => {
-//   try {
-//     const {
-//     } = req.body;
-//     console.log(req.body);
-//     const data = {
-//       title,
-//       description,
-//       price,
-//       categoryId,
-//       userId: res.locals.user.id
-//     };
-//     const product = await Favorite.create(data); // формируем пролдукт новый
-//     if (product) {
-//       // здесь важно правильно отправить форму
-//       const html = res.renderComponent(ProductItem, { product }, { doctype: false });
-//       res.status(201).json({ message: 'success', html });
-//     }
-//   } catch ({ message }) {
-//     res.status(500).json({ error: message });
-//   }
-// });
+
 module.exports = router;

@@ -9,14 +9,16 @@ if (regForm) {
 
     // в цель события попадают форма в виде объекта,
     // где ключ - name, значение - value
-    const { name, email, password, cpassword } = e.target;
+    const {
+      name, email, password, cpassword,
+    } = e.target;
 
     if (password.value === cpassword.value) {
       const user = {
         name: name.value,
         email: email.value,
         password: password.value,
-         };
+      };
 
       // отправили информацию с userom на сервер
       const res = await fetch('/api/auth/registration', {
@@ -32,7 +34,7 @@ if (regForm) {
         return;
       }
     }
-    console.log('пароли не совпадают');
+    alert('пароли не совпадают');
   });
 }
 

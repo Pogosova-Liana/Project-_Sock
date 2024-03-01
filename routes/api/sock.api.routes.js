@@ -25,7 +25,7 @@ router.post('/:id', async (req, res) => {
     const { id } = req.body;
     const userId = res.locals.user.id;
     const newFav = await Favorite.create({ user_id: userId, sock_id: id });
-    console.log(newFav);
+    // console.log(newFav);
     if (newFav) {
       res.status(201).json({ message: 'success' });
     }

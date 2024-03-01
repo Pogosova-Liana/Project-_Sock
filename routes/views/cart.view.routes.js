@@ -8,7 +8,7 @@ router.get('/', async (req, res) => {
       where: { user_id: res.locals.user.id },
       include: { model: Order_line, include: { model: Sock } },
     });
-    console.log(cart, 11111);
+    // console.log(cart, 11111);
     const html = res.renderComponent(CartPage, {
       title: 'Корзина',
       cart,
