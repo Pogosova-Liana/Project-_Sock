@@ -18,6 +18,13 @@ module.exports = {
         },
         onDelete: 'CASCADE',
       },
+      status: {
+        allowNull: false,
+        type: Sequelize.TEXT,
+      },
+      totalPrice: {
+        type: Sequelize.TEXT,
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,
